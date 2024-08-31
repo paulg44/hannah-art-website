@@ -38,6 +38,9 @@ button {
 
 img {
   position: relative;
+  max-width: 100%;
+  height: auto;
+
   border: 10px solid black;
   margin: 20px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
