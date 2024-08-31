@@ -17,9 +17,7 @@
 .headline h1 {
   color: var(--dark-purple);
   text-decoration: underline;
-  /* font-size: 7vw; */
-  /* font-size: calc(100px - ((100vw - 1000px) / 10)); */
-  font-size: clamp(40px, 6vw, 200px);
+  font-size: clamp(50px, 6vw, 200px);
 }
 
 .headline h2 {
@@ -53,4 +51,32 @@
   position: absolute;
   right: 20%;
   bottom: 20%;
+}
+
+@media only screen and (max-width: 600px) {
+  .header-container {
+    overflow: hidden;
+  }
+  .header-images-container img:first-child {
+    right: -35%;
+    top: 20%;
+  }
+
+  .header-images-container img:nth-child(2) {
+    position: absolute;
+    right: -35%;
+  }
+  .header-images-container img:last-child {
+    display: none;
+  }
+
+  .buy-btn {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5%;
+    padding: 10px 100px;
+    text-align: center;
+    font-size: 18px;
+    width: 300px;
+  }
 }
