@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --dark-purple: #400269;
+  --light-purple: #9d4edd;
+  --light-grey: #bfa6f5;
+  --very-light-blue: #e2eafc;
+  --off-white: #f4f4f4;
+}
+
+body {
+  background-color: var(--off-white);
+  font-family: "Roboto Flex", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Imperial Script", cursive;
+}
+
+button {
+  cursor: pointer;
+  border: 5px solid var(--dark-purple);
+  outline: none;
+  font-weight: 800;
+  font-size: large;
+  padding: 20px 60px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+}
+
+img {
+  position: relative;
+  border: 10px solid black;
+  margin: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+i {
+  color: var(--light-grey);
+}

@@ -1,0 +1,54 @@
+.header-container {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.headline {
+  position: absolute;
+  top: 10%;
+  left: 8%;
+  z-index: 100;
+}
+
+.headline h1 {
+  color: var(--dark-purple);
+  text-decoration: underline;
+  font-size: 100px;
+}
+
+.headline h2 {
+  color: var(--light-purple);
+  width: 55%;
+  border-bottom: 1px solid var(--light-purple);
+}
+
+.header-images-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-images-container img {
+  width: 260px;
+}
+
+.header-images-container img:first-child {
+  position: absolute;
+  right: 20%;
+  top: 10%;
+}
+
+.header-images-container img:last-child {
+  position: absolute;
+  left: 20%;
+  bottom: 10%;
+}
+
+.buy-btn {
+  position: absolute;
+  right: 20%;
+  bottom: 20%;
+}
