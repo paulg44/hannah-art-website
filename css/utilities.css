@@ -33,6 +33,7 @@ button {
   font-weight: 800;
   font-size: large;
   padding: 20px 60px;
+  border-radius: 5px;
   box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -40,7 +41,7 @@ img {
   position: relative;
   max-width: 100%;
   height: auto;
-
+  border-radius: 5px;
   border: 10px solid black;
   margin: 20px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,

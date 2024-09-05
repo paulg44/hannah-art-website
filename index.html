@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./css/utilities.css" />
     <link rel="stylesheet" href="./css/navbar.css" />
     <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/shop.css" />
     <script
       src="https://kit.fontawesome.com/2644cfaa53.js"
       crossorigin="anonymous"
@@ -27,11 +28,11 @@
   <body class="container-fluid">
     <div class="navbar">
       <div class="icons">
-        <i class="fa-home fa-solid fa-3x"></i>
-        <i class="fa-cart-shopping fa-solid fa-3x"></i>
-        <i class="fa-user fa-solid fa-3x"></i>
-        <i class="fa-envelope fa-solid fa-3x"></i>
-        <i class="fa-question fa-solid fa-3x"></i>
+        <i class="fa-home fa-solid"></i>
+        <i class="fa-cart-shopping fa-solid"></i>
+        <i class="fa-user fa-solid"></i>
+        <i class="fa-envelope fa-solid"></i>
+        <i class="fa-question fa-solid"></i>
       </div>
     </div>
 
@@ -67,16 +68,11 @@
       <div class="shop-grid-container">
         <!-- These will be dynamically added from a js file, mapping through the json file -->
         <i class="fa-solid fa-arrow-left fa-2x"></i>
-        <div class="shop-image-container">
-          <img src="./assets/images/asian_hannah.jpg" alt="asian" />
-          <img src="./assets/images/harley_hannah.jpg" alt="harley" />
-          <img src="./assets/images/horse2_hannah.jpg" alt="horse" />
-          <img src="./assets/images/god_hannah.jpg" alt="god" />
-          <img src="./assets/images/love_hannah.jpg" alt="love" />
-          <img src="./assets/images/tara_hannah.jpg" alt="tara" />
-        </div>
+        <div class="shop-image-container"></div>
         <i class="fa-solid fa-arrow-right fa-2x"></i>
       </div>
     </section>
+
+    <script type="module" src="./js/shopContainer.js"></script>
   </body>
 </html>
