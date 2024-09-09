@@ -15,11 +15,31 @@
   grid-template-rows: auto;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 50px;
 }
 
 .shop-card {
-  border: 1px solid red;
+  position: relative;
   height: 300px;
   width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.shop-card img {
+  width: 70%;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.shop-card p {
+  margin: 0;
+}
+
+.shop-price-btn {
+  border: 2px solid var(--dark-purple);
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+  padding: 2px 25px;
 }
