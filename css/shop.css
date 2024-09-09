@@ -1,3 +1,23 @@
+.shop-container {
+  height: auto;
+  padding-top: 40px;
+}
+
+.shop-grid-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shop-image-container {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
 .shop-card {
   border: 1px solid red;
   height: 300px;

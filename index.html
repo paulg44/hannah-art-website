@@ -28,8 +28,8 @@
   <body class="container-fluid">
     <div class="navbar">
       <div class="icons">
-        <i class="fa-home fa-solid"></i>
-        <i class="fa-cart-shopping fa-solid"></i>
+        <a href="#home"><i class="fa-home fa-solid"></i></a>
+        <a href="#shop"><i class="fa-cart-shopping fa-solid"></i></a>
         <i class="fa-user fa-solid"></i>
         <i class="fa-envelope fa-solid"></i>
         <i class="fa-question fa-solid"></i>
@@ -37,7 +37,7 @@
     </div>
 
     <!-- Header and Homepage -->
-    <section class="header-container container-fluid">
+    <section id="home" class="header-container container-fluid">
       <div class="headline">
         <h1>Hannah Jane Garton</h1>
         <h2>Fine Art</h2>
@@ -63,8 +63,10 @@
       <button type="button" class="buy-btn">BUY NOW</button>
     </section>
 
+    <br />
+
     <!-- Shop -->
-    <section class="shop-container">
+    <section id="shop" class="shop-container">
       <div class="shop-grid-container">
         <!-- These will be dynamically added from a js file, mapping through the json file -->
         <i class="fa-solid fa-arrow-left fa-2x"></i>
