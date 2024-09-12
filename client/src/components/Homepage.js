@@ -1,0 +1,32 @@
+import "../css/header.css";
+import manDrawing from "../assets/images/man_hannah.jpg";
+import horseDrawing from "../assets/images/horse_hannah.jpg";
+import clownDrawing from "../assets/images/clown_hannah.jpg";
+
+function Homepage() {
+  return (
+    <section id="home" class="header-container container-fluid">
+      <div class="headline">
+        <h1>Hannah Jane Garton</h1>
+        <h2>Fine Art</h2>
+      </div>
+
+      <div class="header-images">
+        <div class="header-images-container">
+          <img src={manDrawing} alt="pencil drawing of a man" />
+          <img src={clownDrawing} alt="pencil drawing of a horse" />
+          <img
+            src={horseDrawing}
+            alt="pencil drawing of a clown with a burst of colour"
+          />
+        </div>
+      </div>
+
+      <button t type="button" class="buy-btn">
+        BUY NOW
+      </button>
+    </section>
+  );
+}
+
+export default Homepage;

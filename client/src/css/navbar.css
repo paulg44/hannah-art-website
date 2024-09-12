@@ -1,11 +1,9 @@
 .navbar {
   overflow: hidden;
   position: fixed;
-  left: 2%;
   top: 50%;
   transform: translateY(-50%);
   width: 20%;
-  height: 50vh;
   z-index: 100;
 }
 
