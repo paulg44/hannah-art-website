@@ -9,8 +9,8 @@ import {
 
 function Navbar() {
   return (
-    <div class="navbar">
-      <div class="icons">
+    <div className="navbar">
+      <div className="icons">
         <a href="#home">
           <FaHome />
         </a>

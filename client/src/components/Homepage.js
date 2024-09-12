@@ -5,14 +5,14 @@ import clownDrawing from "../assets/images/clown_hannah.jpg";
 
 function Homepage() {
   return (
-    <section id="home" class="header-container container-fluid">
-      <div class="headline">
+    <section id="home" className="header-container container-fluid">
+      <div className="headline">
         <h1>Hannah Jane Garton</h1>
         <h2>Fine Art</h2>
       </div>
 
-      <div class="header-images">
-        <div class="header-images-container">
+      <div className="header-images">
+        <div className="header-images-container">
           <img src={manDrawing} alt="pencil drawing of a man" />
           <img src={clownDrawing} alt="pencil drawing of a horse" />
           <img
@@ -22,7 +22,7 @@ function Homepage() {
         </div>
       </div>
 
-      <button t type="button" class="buy-btn">
+      <button type="button" className="buy-btn">
         BUY NOW
       </button>
     </section>
