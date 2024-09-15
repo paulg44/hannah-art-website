@@ -16,6 +16,8 @@ import picasso from "../assets/images/picasso_hannah.jpg";
 import rhianna from "../assets/images/rhianna_hannah.jpg";
 import tara from "../assets/images/tara_hannah.jpg";
 
+// This may all be obsolete eventually as I've just thought I'll need to add each drawing asd a product on Stripe to be able to sell, so all this is redundant really
+
 function Shop() {
   const art = [
     {
