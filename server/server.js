@@ -30,6 +30,17 @@ app.post("/create-checkout-session", async (req, res) => {
   res.redirect(303, session.url);
 });
 
+app.get("/all-stripe-products", async (req, res) => {
+  try {
+    const products = await Stripe.products.list({
+      limit: 10,
+    });
+    res.json(products.data);
+  } catch (error) {
+    res.status(500).send("Error fetching products in server");
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on ${PORT}`);
 });
