@@ -1,11 +1,13 @@
 import "../css/shop.css";
 // import artData from "../assets/utils/art.json";
 import asian_hannah from "../assets/images/asian_hannah.jpg";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // This may all be obsolete eventually as I've just thought I'll need to add each drawing asd a product on Stripe to be able to sell, so all this is redundant really
 
 function Shop() {
+  const [products, setProducts] = useState([]);
+
   useEffect(() => {
     const fetchAllStripeProducts = async () => {
       try {
@@ -14,7 +16,8 @@ function Shop() {
             return productData.json();
           }
         );
-        console.log(stripeResponse);
+        setProducts(stripeResponse);
+        // console.log(stripeResponse);
       } catch (error) {
         console.error("Error fetching data from stripe", error);
       }
@@ -25,24 +28,23 @@ function Shop() {
   return (
     <section id="shop" className="shop-container">
       <div className="shop-grid-container">
-        <i className="fa-solid fa-arrow-left fa-2x"></i>
         <div className="shop-image-container">
-          <div className="shopCard">
-            <h3>Asian</h3>
-            <img src={asian_hannah} alt="asian" />
-            <p>Test piece</p>
-
-            <form
-              action="http://localhost:3000/create-checkout-session"
-              method="POST"
-            >
-              <button className="shop-price-btn" type="submit">
-                Buy for 20.99
-              </button>
-            </form>
-          </div>
+          {products.map((item) => (
+            <div id={item.id} className="shopCard">
+              <h3>{item.name}</h3>
+              <img src={item.images[0]} alt={item.name} />
+              <p>{item.description}</p>
+              <form
+                action="http://localhost:3000/create-checkout-session"
+                method="POST"
+              >
+                <button className="shop-price-btn" type="submit">
+                  Buy for £{item.metadata.client_side_price}
+                </button>
+              </form>
+            </div>
+          ))}
         </div>
-        <i className="fa-solid fa-arrow-right fa-2x"></i>
       </div>
     </section>
   );
