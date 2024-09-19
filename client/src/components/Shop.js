@@ -1,9 +1,5 @@
 import "../css/shop.css";
-// import artData from "../assets/utils/art.json";
-import asian_hannah from "../assets/images/asian_hannah.jpg";
 import { useEffect, useState } from "react";
-
-// This may all be obsolete eventually as I've just thought I'll need to add each drawing asd a product on Stripe to be able to sell, so all this is redundant really
 
 function Shop() {
   const [products, setProducts] = useState([]);
@@ -17,31 +13,59 @@ function Shop() {
           }
         );
         setProducts(stripeResponse);
-        // console.log(stripeResponse);
+        console.log(stripeResponse);
       } catch (error) {
-        console.error("Error fetching data from stripe", error);
+        console.error("Error fetching data client side", error);
       }
     };
     fetchAllStripeProducts();
   }, []);
+
+  async function handleCheckout(price_id) {
+    try {
+      const checkoutResponse = await fetch(
+        "http://localhost:3000/create-checkout-session",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            price_id,
+          }),
+        }
+      );
+
+      const session = await checkoutResponse.json();
+      if (session.url) {
+        window.location.href = session.url;
+      }
+    } catch (error) {
+      console.log("Error", error);
+    }
+  }
 
   return (
     <section id="shop" className="shop-container">
       <div className="shop-grid-container">
         <div className="shop-image-container">
           {products.map((item) => (
-            <div id={item.id} className="shopCard">
+            <div key={item.id} className="shopCard">
               <h3>{item.name}</h3>
               <img src={item.images[0]} alt={item.name} />
               <p>{item.description}</p>
-              <form
+              {/* <form
                 action="http://localhost:3000/create-checkout-session"
                 method="POST"
+              > */}
+              <button
+                className="shop-price-btn"
+                type="submit"
+                onClick={() => handleCheckout(item.default_price)}
               >
-                <button className="shop-price-btn" type="submit">
-                  Buy for £{item.metadata.client_side_price}
-                </button>
-              </form>
+                Buy for £{item.metadata.client_side_price}
+              </button>
+              {/* </form> */}
             </div>
           ))}
         </div>
