@@ -7,11 +7,11 @@ function Shop() {
   useEffect(() => {
     const fetchAllStripeProducts = async () => {
       try {
-        const stripeResponse = await fetch("/all-stripe-products").then(
-          (productData) => {
-            return productData.json();
-          }
-        );
+        const stripeResponse = await fetch(
+          "http://localhost:3000/all-stripe-products"
+        ).then((productData) => {
+          return productData.json();
+        });
         setProducts(stripeResponse);
         console.log(stripeResponse);
       } catch (error) {

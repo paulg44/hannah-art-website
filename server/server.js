@@ -11,8 +11,14 @@ const app = express();
 
 const PORT = process.env.REACT_APP_PORT;
 
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    credentials: true,
+  })
+);
+app.options("*", cors());
 app.use(express.json());
-app.use(cors());
 
 app.post("/create-checkout-session", async (req, res) => {
   const { price_id } = req.body;
@@ -30,7 +36,7 @@ app.post("/create-checkout-session", async (req, res) => {
       mode: "payment",
     });
 
-    res.redirect(303, session.url);
+    res.json({ url: session.url });
   } catch (error) {
     console.error("Error creating checkout session", error);
     res.status(500).send("Error creating checkout session");
