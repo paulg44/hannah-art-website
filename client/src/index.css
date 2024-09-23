@@ -16,7 +16,6 @@ body {
   background-color: var(--off-white);
   font-family: "Roboto Flex", sans-serif;
   width: 100%;
-  border: 2px solid red;
 }
 
 h1,
