@@ -1,9 +1,9 @@
 .shop-container {
-  height: auto;
-  padding-top: 40px;
+  height: 100vh;
 }
 
 .shop-grid-container {
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,31 +15,25 @@
   grid-template-rows: auto;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 25px 50px;
 }
 
-.shop-card {
+.shopCard {
   position: relative;
-  height: 300px;
-  width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.shop-card img {
-  width: 70%;
-  margin: 0;
-  margin-bottom: 5px;
-}
-
-.shop-card p {
-  margin: 0;
+.shopCard img {
+  width: 50%;
+  margin: 5px 0;
+  outline: 2px solid black;
 }
 
 .shop-price-btn {
   border: 2px solid var(--dark-purple);
   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
-  padding: 2px 25px;
+  padding: 3px 25px;
 }

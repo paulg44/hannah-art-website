@@ -17,18 +17,20 @@
 .headline h1 {
   /* color: var(--dark-purple); */
   text-decoration: underline;
-  font-size: clamp(50px, 6vw, 200px);
+  font-size: clamp(40px, 5vw, 200px);
 }
 
 .headline h2 {
+  font-size: 30px;
   color: var(--light-purple);
-  width: 55%;
+  width: 65%;
   border-bottom: 1px solid var(--light-purple);
 }
 
 .header-images-container {
   display: flex;
   flex-direction: column;
+  margin-top: 30%;
 }
 
 .header-images-container img {
@@ -38,19 +40,19 @@
 .header-images-container img:first-child {
   position: absolute;
   right: 15%;
-  top: 14%;
+  top: 30%;
 }
 
 .header-images-container img:last-child {
   position: absolute;
   left: 15%;
-  bottom: 14%;
+  bottom: 15%;
 }
 
 .buy-btn {
   position: absolute;
   right: 20%;
-  bottom: 20%;
+  bottom: 10%;
 }
 
 @media only screen and (max-width: 600px) {

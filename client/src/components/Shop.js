@@ -54,10 +54,7 @@ function Shop() {
               <h3>{item.name}</h3>
               <img src={item.images[0]} alt={item.name} />
               <p>{item.description}</p>
-              {/* <form
-                action="http://localhost:3000/create-checkout-session"
-                method="POST"
-              > */}
+
               <button
                 className="shop-price-btn"
                 type="submit"
@@ -65,7 +62,6 @@ function Shop() {
               >
                 Buy for £{item.metadata.client_side_price}
               </button>
-              {/* </form> */}
             </div>
           ))}
         </div>

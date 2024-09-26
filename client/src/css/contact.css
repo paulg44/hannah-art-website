@@ -1,22 +1,59 @@
 .contact {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  margin: 20px 200px;
+}
+
+.contact h2 {
+  margin-bottom: 0;
+}
+
+.contactText {
+  width: 80%;
+  margin: 40px 0;
+  font-size: 26px;
+  text-align: center;
 }
 
 .emailElement {
+  text-decoration: none;
+  text-align: center;
+  /* margin: auto; */
   border: 3px solid var(--dark-purple);
-  padding: 10px 60px;
+  width: 60%;
+  padding: 20px 0;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  background: var(--off-white);
+  z-index: 10;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
 }
 
-.emailElement::before {
-  content: "";
+.box {
   position: absolute;
-  width: inherit;
-  height: inherit;
-  /* padding: 10px 60px; */
+  width: 60%;
+  height: 60px;
+  background-color: var(--off-white);
+  border: 3px solid var(--very-light-blue);
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+}
+
+.boxOne {
+  top: 75%;
+  left: 35%;
+}
+
+.boxTwo {
   border: 3px solid var(--light-purple);
+  top: 70%;
+  left: 30%;
+}
+
+.boxThree {
+  border: 3px solid var(--light-grey);
+  top: 65%;
+  left: 25%;
 }
