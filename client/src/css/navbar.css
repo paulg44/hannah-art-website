@@ -1,21 +1,26 @@
 .navbar {
+  background-color: var(--dark-purple);
   overflow: hidden;
   position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 20%;
-  z-index: 100;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .icons {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-.icons i {
-  margin: 10px 0;
-  font-size: 50px;
+.icons a {
+  margin: 0 60px;
+  font-size: 30px;
+  color: var(--off-white);
 }
 
 @media only screen and (max-width: 600px) {

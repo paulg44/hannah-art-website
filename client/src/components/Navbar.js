@@ -14,11 +14,11 @@ function Navbar() {
         <a href="#home">
           <FaHome />
         </a>
-        <a href="#shop">
-          <FaShoppingCart />
-        </a>
         <a href="#about">
           <FaUser />
+        </a>
+        <a href="#shop">
+          <FaShoppingCart />
         </a>
         <a href="#contact">
           <FaEnvelope />

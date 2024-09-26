@@ -15,7 +15,7 @@
 }
 
 .headline h1 {
-  color: var(--dark-purple);
+  /* color: var(--dark-purple); */
   text-decoration: underline;
   font-size: clamp(50px, 6vw, 200px);
 }

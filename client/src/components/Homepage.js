@@ -8,7 +8,7 @@ function Homepage() {
     <section id="home" className="header-container container-fluid">
       <div className="headline">
         <h1>Hannah Jane Garton</h1>
-        <h2>Fine Art</h2>
+        <h2>Artist & Illustrator</h2>
       </div>
 
       <div className="header-images">

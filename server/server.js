@@ -25,8 +25,9 @@ app.post("/create-checkout-session", async (req, res) => {
 
   try {
     const session = await Stripe.checkout.sessions.create({
-      success_url: "https://localhost:3000/success",
-      cancel_url: "https://localhost:3000/cancel",
+      success_url:
+        "http://localhost:3000/success?session_id={CHECKOUT_SESSION_ID}",
+      cancel_url: "http://localhost:3000/cancel",
       line_items: [
         {
           price: price_id,
@@ -70,6 +71,23 @@ app.get("/all-stripe-products", async (req, res) => {
   } catch (error) {
     console.error("Error fetching data server side");
     res.status(500).send("Error fetching products in server");
+  }
+});
+
+app.get("/success", async (req, res) => {
+  try {
+    const session = await stripe.checkout.sessions.retrieve(
+      req,
+      query.session_id
+    );
+    const customer = await stripe.customers.retrieve(session.customer);
+    res.json({
+      message: `Thanks for your order, ${customer.name}!`,
+      customerEmail: customer.email,
+    });
+  } catch (error) {
+    console.error("Error retrieving the checkout session", error);
+    res.status(500).send("Error processing the success response");
   }
 });
 
