@@ -37,14 +37,14 @@
 
 .header-images-container img:first-child {
   position: absolute;
-  right: 20%;
-  top: 10%;
+  right: 15%;
+  top: 14%;
 }
 
 .header-images-container img:last-child {
   position: absolute;
-  left: 20%;
-  bottom: 10%;
+  left: 15%;
+  bottom: 14%;
 }
 
 .buy-btn {

@@ -16,7 +16,7 @@
 
 body {
   background-color: var(--off-white);
-  font-family: "Roboto Flex", sans-serif;
+  font-family: "Roboto", sans-serif;
   width: 100%;
 }
 
@@ -44,11 +44,23 @@ img {
   position: relative;
   max-width: 100%;
   height: auto;
-  border-radius: 5px;
-  border: 5px solid black;
+  /* border-radius: 2px; */
+  border: 10px solid var(--off-white);
+  outline: 5px solid black;
   margin: 20px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+img::after {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: 5px solid red;
 }
 
 i {
