@@ -1,3 +1,4 @@
+import { Container } from "react-bootstrap";
 import "../css/shop.css";
 import { useEffect, useState } from "react";
 
@@ -46,27 +47,29 @@ function Shop() {
   }
 
   return (
-    <section id="shop" className="shop-container">
-      <div className="shop-grid-container">
-        <div className="shop-image-container">
-          {products.map((item) => (
-            <div key={item.id} className="shopCard">
-              <h3>{item.name}</h3>
-              <img src={item.images[0]} alt={item.name} />
-              <p>{item.description}</p>
+    <Container fluid>
+      <section id="shop" className="shop-container">
+        <div className="shop-grid-container">
+          <div className="shop-image-container">
+            {products.map((item) => (
+              <div key={item.id} className="shopCard">
+                <h3>{item.name}</h3>
+                <img src={item.images[0]} alt={item.name} />
+                <p>{item.description}</p>
 
-              <button
-                className="shop-price-btn"
-                type="submit"
-                onClick={() => handleCheckout(item.default_price)}
-              >
-                Buy for £{item.metadata.client_side_price}
-              </button>
-            </div>
-          ))}
+                <button
+                  className="shop-price-btn"
+                  type="submit"
+                  onClick={() => handleCheckout(item.default_price)}
+                >
+                  Buy for £{item.metadata.client_side_price}
+                </button>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </Container>
   );
 }
 

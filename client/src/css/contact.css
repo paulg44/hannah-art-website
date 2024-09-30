@@ -57,3 +57,16 @@
   top: 65%;
   left: 25%;
 }
+
+@media (max-width: 1000px) {
+  .contact {
+    height: auto;
+    margin: 50px 0 200px;
+  }
+
+  .boxOne,
+  .boxTwo,
+  .boxThree {
+    display: none;
+  }
+}
