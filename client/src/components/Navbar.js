@@ -23,7 +23,7 @@ function Navbar() {
         <a href="#contact">
           <FaEnvelope />
         </a>
-        <a href="#faqs">
+        <a href="#footer">
           <FaQuestion />
         </a>
       </div>

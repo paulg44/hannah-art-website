@@ -3,6 +3,7 @@ import Homepage from "./components/Homepage.js";
 import Shop from "./components/Shop.js";
 import About from "./components/About.js";
 import Contact from "./components/Conatct.js";
+import Footer from "./components/Footer.js";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <About />
       <Shop />
       <Contact />
+      <Footer />
     </div>
   );
 }
