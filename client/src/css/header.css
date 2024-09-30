@@ -60,16 +60,19 @@
     overflow: hidden;
   }
   .header-images-container img:first-child {
-    right: -35%;
+    right: 0%;
     top: 20%;
   }
 
   .header-images-container img:nth-child(2) {
     position: absolute;
-    right: -35%;
+    right: 0%;
   }
   .header-images-container img:last-child {
     display: none;
+  }
+  .header-images-container img {
+    width: 200px;
   }
 
   .buy-btn {

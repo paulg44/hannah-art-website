@@ -71,3 +71,9 @@ a {
   font-size: 40px;
   color: var(--dark-purple);
 }
+
+@media (max-width: 1000px) {
+  body {
+    width: auto;
+  }
+}

@@ -1,17 +1,17 @@
 .navbar {
   background-color: var(--light-grey);
-  overflow: hidden;
   position: fixed;
   top: 0;
   height: 60px;
   width: 100%;
-  z-index: 1000;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.icons {
+.iconsList {
+  list-style-type: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,8 +23,35 @@
   color: var(--off-white);
 }
 
-@media only screen and (max-width: 600px) {
-  .icons i {
-    font-size: 30px;
+.burgerMenuBtn {
+  cursor: pointer;
+  display: none;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1000px) {
+  .burgerMenuBtn {
+    width: auto;
+    text-align: right;
+    display: block;
+    margin: 10px 20px;
+  }
+
+  .icons ul {
+    display: none;
+  }
+
+  .icons.open .iconsList {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: black;
+    z-index: 1000;
+  }
+
+  .icons.open {
+    display: flex;
   }
 }
