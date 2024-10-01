@@ -35,8 +35,6 @@ app.post("/create-checkout-session", async (req, res) => {
 
   try {
     const session = await Stripe.checkout.sessions.create({
-      success_url: `${process.env.REACT_APP_FRONTEND_URL}success`,
-      cancel_url: `${process.env.REACT_APP_FRONTEND_URL}`,
       line_items: [
         {
           price: price_id,
@@ -44,7 +42,15 @@ app.post("/create-checkout-session", async (req, res) => {
         },
       ],
       mode: "payment",
+      success_url: `${process.env.REACT_APP_FRONTEND_URL}success`,
+      cancel_url: `${process.env.REACT_APP_FRONTEND_URL}`,
     });
+
+    res.header(
+      "Access-Control-Allow-Origin",
+      "https://hannahjanegarton.netlify.app"
+    );
+    res.header("Access-Control-Allow-Credentials", "true");
 
     res.json({ url: session.url });
   } catch (error) {
