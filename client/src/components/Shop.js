@@ -1,9 +1,9 @@
 import { Container } from "react-bootstrap";
-import dotenv from "dotenv";
+// import dotenv from "dotenv";
 import "../css/shop.css";
 import { useEffect, useState } from "react";
 
-dotenv.config();
+// dotenv.config();
 
 function Shop() {
   const [products, setProducts] = useState([]);
