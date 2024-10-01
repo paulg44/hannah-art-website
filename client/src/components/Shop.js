@@ -1,6 +1,9 @@
 import { Container } from "react-bootstrap";
+import dotenv from "dotenv";
 import "../css/shop.css";
 import { useEffect, useState } from "react";
+
+dotenv.config();
 
 function Shop() {
   const [products, setProducts] = useState([]);
@@ -9,7 +12,7 @@ function Shop() {
     const fetchAllStripeProducts = async () => {
       try {
         const stripeResponse = await fetch(
-          "http://localhost:3000/all-stripe-products"
+          `${process.env.REACT_APP_RENDER_URL}/all-stripe-products`
         ).then((productData) => {
           return productData.json();
         });
@@ -25,7 +28,7 @@ function Shop() {
   async function handleCheckout(price_id) {
     try {
       const checkoutResponse = await fetch(
-        "http://localhost:3000/create-checkout-session",
+        `${process.env.REACT_APP_RENDER_URL}/create-checkout-session`,
         {
           method: "POST",
           headers: {

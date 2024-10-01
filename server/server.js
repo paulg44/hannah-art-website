@@ -25,8 +25,8 @@ app.post("/create-checkout-session", async (req, res) => {
 
   try {
     const session = await Stripe.checkout.sessions.create({
-      success_url: "http://localhost:3000/success",
-      cancel_url: "http://localhost:3000/",
+      success_url: `${process.env.REACT_APP_FRONTEND_URL}success`,
+      cancel_url: `${process.env.REACT_APP_FRONTEND_URL}`,
       line_items: [
         {
           price: price_id,
