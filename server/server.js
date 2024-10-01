@@ -13,7 +13,7 @@ const PORT = process.env.REACT_APP_PORT;
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: process.env.REACT_APP_FRONTEND_URL,
     credentials: true,
   })
 );
