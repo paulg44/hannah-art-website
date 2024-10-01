@@ -24,9 +24,9 @@ function Homepage() {
           </div>
         </div>
 
-        <button type="button" className="buy-btn">
+        <a href="#shop" className="buy-btn">
           BUY NOW
-        </button>
+        </a>
       </section>
     </Container>
   );

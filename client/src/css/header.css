@@ -49,7 +49,12 @@
 }
 
 .buy-btn {
+  font-family: "Courier New", Courier, monospace;
+  text-decoration: none;
+  padding: 5px 30px;
   position: absolute;
+  border: 2px solid var(--dark-purple);
+  border-radius: 5px;
   right: 20%;
   bottom: 10%;
 }
