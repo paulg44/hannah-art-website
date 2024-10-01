@@ -14,25 +14,20 @@ const PORT = process.env.REACT_APP_PORT;
 app.use(
   cors({
     origin: "https://hannahjanegarton.netlify.app/",
+    methods: "GET, POST, PUT, DELETE, OPTIONS",
+    allowedHeaders: "Origin, X-Requested-With, Content-Type, Accept",
     credentials: true,
   })
 );
 
-app.use((req, res, next) => {
+app.options("*", (req, res) => {
   res.header(
     "Access-Control-Allow-Origin",
     "https://hannahjanegarton.netlify.app"
   );
-  res.header("Access-Control-Allow-Credentials", "true");
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
+  res.header("Access-Control-Allow-Headers", "Origin, Content-Type, Accept");
 });
-
-app.options("*", cors());
 app.use(express.json());
 
 app.post("/create-checkout-session", async (req, res) => {

@@ -34,7 +34,6 @@ function Shop() {
           headers: {
             "Content-Type": "application/json",
           },
-          credentials: "include",
           body: JSON.stringify({
             price_id,
           }),
