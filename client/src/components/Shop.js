@@ -12,7 +12,7 @@ function Shop() {
     const fetchAllStripeProducts = async () => {
       try {
         const stripeResponse = await fetch(
-          `${process.env.REACT_APP_RENDER_URL}/all-stripe-products`
+          `https://hannah-art-website.onrender.com/all-stripe-products`
         ).then((productData) => {
           return productData.json();
         });
@@ -28,7 +28,7 @@ function Shop() {
   async function handleCheckout(price_id) {
     try {
       const checkoutResponse = await fetch(
-        `${process.env.REACT_APP_RENDER_URL}/create-checkout-session`,
+        `https://hannah-art-website.onrender.com/create-checkout-session`,
         {
           method: "POST",
           headers: {
