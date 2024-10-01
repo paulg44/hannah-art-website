@@ -13,7 +13,7 @@ const PORT = process.env.REACT_APP_PORT;
 
 app.use(
   cors({
-    origin: `${process.env.REACT_APP_FRONTEND_URL}`,
+    origin: "https://hannahjanegarton.netlify.app/",
     credentials: true,
   })
 );
