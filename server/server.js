@@ -46,11 +46,11 @@ app.post("/create-checkout-session", async (req, res) => {
       cancel_url: `${process.env.REACT_APP_FRONTEND_URL}`,
     });
 
-    res.header(
-      "Access-Control-Allow-Origin",
-      "https://hannahjanegarton.netlify.app"
-    );
-    res.header("Access-Control-Allow-Credentials", "true");
+    // res.header(
+    //   "Access-Control-Allow-Origin",
+    //   "https://hannahjanegarton.netlify.app"
+    // );
+    // res.header("Access-Control-Allow-Credentials", "true");
 
     res.json({ url: session.url });
   } catch (error) {
