@@ -11,17 +11,16 @@
   position: absolute;
   top: 10%;
   left: 8%;
-  z-index: 100;
 }
 
 .headline h1 {
   /* color: var(--dark-purple); */
   text-decoration: underline;
-  font-size: clamp(40px, 5vw, 200px);
+  font-size: clamp(35px, 5vw, 200px);
 }
 
 .headline h2 {
-  font-size: 30px;
+  font-size: clamp(24px, 4vw, 200px);
   color: var(--light-purple);
   width: 65%;
   border-bottom: 1px solid var(--light-purple);

@@ -30,6 +30,7 @@ p {
   .about {
     width: fit-content;
     margin: 0 30px;
+    text-align: center;
   }
 
   .aboutDescription {
@@ -38,5 +39,10 @@ p {
 
   .aboutText {
     width: fit-content;
+  }
+
+  p {
+    text-align: center;
+    padding-bottom: 10px;
   }
 }

@@ -40,6 +40,8 @@
 
 @media (max-width: 1000px) {
   .shop-container {
+    border-top: 1px solid var(--dark-purple);
+    padding-top: 30px;
     height: auto;
   }
   .shop-grid-container {
@@ -49,5 +51,18 @@
   .shop-image-container {
     display: flex;
     flex-direction: column;
+  }
+
+  .shopCard {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--dark-purple);
+  }
+
+  .shopCard h3 {
+    font-size: 30px;
+  }
+
+  .shopCard img {
+    width: 80%;
   }
 }

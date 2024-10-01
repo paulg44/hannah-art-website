@@ -8,6 +8,7 @@
 }
 
 .contact h2 {
+  font-size: clamp(35px, 5vw, 200px);
   margin-bottom: 0;
 }
 
@@ -62,6 +63,10 @@
   .contact {
     height: auto;
     margin: 50px 0 200px;
+  }
+
+  .emailElement {
+    width: 90%;
   }
 
   .boxOne,
