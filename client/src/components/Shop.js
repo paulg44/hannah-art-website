@@ -12,7 +12,11 @@ function Shop() {
     const fetchAllStripeProducts = async () => {
       try {
         const stripeResponse = await fetch(
-          `https://hannah-art-website.onrender.com/all-stripe-products`
+          `https://hannah-art-website.onrender.com/all-stripe-products`,
+          {
+            method: "GET",
+            credentials: "include",
+          }
         ).then((productData) => {
           return productData.json();
         });
