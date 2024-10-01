@@ -23,7 +23,7 @@ function Success() {
   // }, [successMessage]);
   return (
     <div className="successPage">
-      <h1>Thank you very much for your purchase and support</h1>
+      <h1>Thank you very much for your purchase and support!</h1>
       <p>An email will be sent with your invoice and shipping details.</p>
       <p>
         You are now free to close the window or click <Link to={"/"}>here</Link>{" "}
