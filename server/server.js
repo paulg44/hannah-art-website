@@ -63,7 +63,7 @@ app.get("/all-stripe-products", async (req, res) => {
       limit: 10,
       active: true,
     });
-    const prices = await Stripe.prices.list({ limit: 10 });
+    const prices = await Stripe.prices.list({ limit: 10, active: true });
 
     const productsAndPrices = products.data.map((item) => {
       const itemPrice = prices.data.find(
