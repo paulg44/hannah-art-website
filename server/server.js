@@ -61,6 +61,7 @@ app.get("/all-stripe-products", async (req, res) => {
   try {
     const products = await Stripe.products.list({
       limit: 10,
+      active: true,
     });
     const prices = await Stripe.prices.list({ limit: 10 });
 
