@@ -5,7 +5,7 @@ import stripe from "stripe";
 
 dotenv.config();
 
-const Stripe = new stripe(process.env.REACT_APP_STRIPE_SECRET_KEY);
+const Stripe = new stripe(process.env.REACT_APP_STRIPE_LIVE_KEY);
 
 const app = express();
 
