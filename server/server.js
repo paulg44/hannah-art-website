@@ -39,8 +39,8 @@ app.post("/create-checkout-session", async (req, res) => {
 
   try {
     const session = await Stripe.checkout.sessions.create({
-      success_url: `${process.env.REACT_APP_FRONTEND_URL}success`,
-      cancel_url: `${process.env.REACT_APP_FRONTEND_URL}`,
+      success_url: `https://hannahjanegarton.netlify.app/success`,
+      cancel_url: `https://hannahjanegarton.netlify.app/`,
       line_items: [
         {
           price: price_id,
