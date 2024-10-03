@@ -1,23 +1,19 @@
 import { Container } from "react-bootstrap";
-// import dotenv from "dotenv";
 import "../css/shop.css";
 import { useEffect, useState } from "react";
-
-// dotenv.config();
 
 function Shop() {
   const [products, setProducts] = useState([]);
 
+  const base_url = process.env.REACT_APP_RENDER_URL;
+
   useEffect(() => {
     const fetchAllStripeProducts = async () => {
       try {
-        const stripeResponse = await fetch(
-          `https://hannah-art-website.onrender.com/all-stripe-products`,
-          {
-            method: "GET",
-            credentials: "include",
-          }
-        ).then((productData) => {
+        const stripeResponse = await fetch(`${base_url}/all-stripe-products`, {
+          method: "GET",
+          credentials: "include",
+        }).then((productData) => {
           return productData.json();
         });
         setProducts(stripeResponse);
@@ -27,12 +23,12 @@ function Shop() {
       }
     };
     fetchAllStripeProducts();
-  }, []);
+  }, [base_url]);
 
   async function handleCheckout(price_id) {
     try {
       const checkoutResponse = await fetch(
-        `https://hannah-art-website.onrender.com/create-checkout-session`,
+        `${base_url}/create-checkout-session`,
         {
           method: "POST",
           headers: {
