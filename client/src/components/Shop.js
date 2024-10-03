@@ -10,7 +10,7 @@ function Shop() {
   useEffect(() => {
     const fetchAllStripeProducts = async () => {
       try {
-        const stripeResponse = await fetch(`${base_url}/all-stripe-products`, {
+        const stripeResponse = await fetch(`${base_url}all-stripe-products`, {
           method: "GET",
           credentials: "include",
         }).then((productData) => {
@@ -28,7 +28,7 @@ function Shop() {
   async function handleCheckout(price_id) {
     try {
       const checkoutResponse = await fetch(
-        `${base_url}/create-checkout-session`,
+        `${base_url}create-checkout-session`,
         {
           method: "POST",
           headers: {
